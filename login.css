@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body{
+    font-family: "Libertinus Serif",serif;
+     background-color: #b5dfbe;
+    /*simple background = poory page par same color, jab ky gradient means transition from one color to another.to right, bottom deg main diagonal ki traf color change hota hai*/
+    text-align: center;
+    
+    position: relative;
+   overflow-x: hidden;
+}
+
+.first-heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1E293B;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.08);
+   text-align: center;
+}
+
+p{
+    color: #1E293B;
+    font-weight: 700;
+    font-size: 1.1rem;
+     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.08);
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.login-form{
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.login-form:hover{
+  transform: translateY(-3px);
+}
+
+input{
+    height: 42px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+}
+
+.login-button{
+   padding: 12px 24px;
+   border-radius: 8px;
+   border: none;
+   cursor: pointer;
+   color: #ffffff;
+    background-color: #2563EB;
+    margin-top: 20px;
+    transition: 0.3s;
+    height: 45px;
+    width: 160px;
+    transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1),
+    background-color 0.2s ease;
+}
+
+.login-button:hover{
+background-color: #1D4ED8;
+transform: translateY(-2px);
+box-shadow: 0 10px 15px -3px rgba(30,70,32,0.35);
+}
+
+label{
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+a{/* anchor tag is by default block or inblock*/
+    color:#2563EB ;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+a:hover{
+   color:  #1D4ED8;
+   opacity: 0.85;
+  text-decoration: underline;
+}
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.blob-1{
+    width: 300px;
+    height: 300px;
+    background: rgba(134, 239, 172, 0.28); 
+     top: -80px;
+     left: -80px;
+}
+
+.blob-2{
+    width: 250px;
+    height: 250px;
+     background: rgba(147, 197, 253, 0.25); 
+    bottom: -60px;
+    right: -60px;
+}
+
+
+@media (max-width: 768px){
+
+    body{
+        padding: 20px 15px;
+    }
+
+    h1{
+        font-size: 2rem;
+        margin: 25px 0;
+    }
+
+    .login-form{
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form-group{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .login-button{
+        width: 100%;
+    }
+
+}

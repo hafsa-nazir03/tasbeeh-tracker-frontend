@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1 class="first-heading">Login to Account</h1>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <form class="login-form" id="login-form">
+
+        <div class="form-group">
+        <label for="email">Email Address</label>
+        <input class="email" id="email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+        <label for="password">Password</label>
+        <input class="password" id="password" type="password" placeholder="Enter your password" required>
+        </div>
+
+        <button class="login-button">Login</button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+    <script src="config.js"></script>
+     <script type="module" src="login.js"></script>
+</body>
+</html>
