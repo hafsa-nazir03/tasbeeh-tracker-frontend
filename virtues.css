@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');  
+html,
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
 body{
     font-family: "Noto Sans", sans-serif;
      background-color: #b5dfbe;
@@ -29,9 +36,13 @@ body{
 }
 
 .card{
-     background: rgba(255,255,255,0.3);
+     background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
      padding: 20px;
      border-radius: 15px;
+     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
      margin: 20px auto;
      transition: 0.3s ease;
      text-align: center;
@@ -91,6 +102,67 @@ a{/* anchor tag is by default block or inblock*/
     transition: 0.3s ease;
 }
 
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.blob-1{
+    width: 300px;
+    height: 300px;
+    background: rgba(134, 239, 172, 0.28);
+     top: -80px;
+     left: -80px;
+}
+
+.blob-2{
+    width: 250px;
+    height: 250px;
+    background: rgba(147, 197, 253, 0.25); 
+    bottom: -60px;
+    right: -60px;
+}
+
 a:hover{
    background: #1b4332;
+}
+
+@media (max-width: 768px){
+
+    body{
+        padding: 20px 15px;
+    }
+
+    h1{
+        font-size: 2rem;
+        margin: 25px 0;
+    }
+
+    .signUp-form{
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form-group{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .SignUp-button{
+        width: 100%;
+    }
+
+    a{
+        display: block;
+        box-sizing: border-box;
+    }
+
 }
