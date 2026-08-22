@@ -40,7 +40,7 @@ p{
 }
 
 .login-form{
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -95,22 +95,21 @@ box-shadow: 0 10px 15px -3px rgba(30,70,32,0.35);
 }
 
 label{
-    color: #334155;
+    color: #1E293B;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
 a{/* anchor tag is by default block or inblock*/
-    color:#2563EB ;
+    color:#1b4332 ;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     transition: 0.3s ease;
-    font-size: 1rem;
 }
 
 a:hover{
-   color:  #1D4ED8;
+   color:   #143d2c;
    opacity: 0.85;
   text-decoration: underline;
 }

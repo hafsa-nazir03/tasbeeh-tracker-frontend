@@ -137,7 +137,7 @@ a:hover{
 
     h1{
         font-size: 2rem;
-        margin: 25px 0;
+        
     }
 
     .signUp-form{
@@ -162,7 +162,11 @@ a:hover{
 
     a{
         display: block;
+        margin: 0px auto 10px;
+        padding: 10px 16px;
         box-sizing: border-box;
+        width: fit-content;
+        margin-bottom: 25px;
     }
 
 }
