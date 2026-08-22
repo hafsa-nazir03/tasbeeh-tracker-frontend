@@ -74,6 +74,7 @@ SEO essentials implemented across pages:
 **Accessibility issues found & fixed:**
 - ❌ ➜ ✅ Low color contrast on text/buttons — fixed by adjusting colors to meet contrast ratio standards.
 - ❌ ➜ ✅ Missing main landmark on the login page — fixed by wrapping page content in a proper `<main>` landmark.
+- ❌ ➜ ✅ Improperly placed "Back to Tracker" anchor tag on virtues.html — fixed by repositioning it and making it responsive to improve accessibility and navigation flow.
 
 ---
 
