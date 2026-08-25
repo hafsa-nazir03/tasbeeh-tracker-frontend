@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duas Tracker | Daily Duas Tracker</title>
+    <link rel="stylesheet" href="duas.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">⬅️ Back</a>
+    </nav>
+    <h1>Duas Tracker</h1>
+    <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <p class="Qoute">‘Dua is the way between the heart and Allah.’</p>
+        <p class="tagline"> Track your daily duas 🌙</p>
+
+        <form id="dua-form">
+        <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="e.g. Dua for Travel">
+        </div>
+
+        <div class="form-group">
+        <label for="arabicText" class="label02">Text</label>
+        <input type="text" id="arabicText" placeholder="e.g. Allahuma inni asalukal haya">
+        </div>
+
+        <div id="drop-down-main">
+            <label for="category">Select Category</label>
+
+        <select id="drop-down">
+            <option value="" disabled selected>Select Category</option><!--Is main yeh hoga ky disabled selected say wo select nhi ho sky ga-->
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+            <option value="Travel">Travel</option>
+            <option value="Daily">Daily</option>
+        </select>
+        </div>
+     <button type="submit" class="button01">Add Dua</button>
+    </form>
+    <h2 class="Duas">Your Duas</h2>
+    <p id="Loading">Loading  Duas...</p>
+    <div id="duaList"></div>
+    <script src="config.js"></script>
+    <script src="duas.js"></script>
+</body>
+</html>

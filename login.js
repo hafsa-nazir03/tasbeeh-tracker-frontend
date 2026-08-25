@@ -2,9 +2,11 @@ import { store } from "./store.js";
 
 
 const loginForm = document.querySelector(".login-form");
-
+const loginBtn = document.querySelector(".login-button");
 loginForm.addEventListener("submit" ,function(event){
  event.preventDefault();//on submit, the page will not refresh(it prevents it)
+ loginBtn.disabled = true;
+ loginBtn.textContent = "logging in...";
  const email = document.getElementById("email").value;//form main added info li ham ny
  const password = document.getElementById("password").value;
  console.log("Login form submitted successfully");
@@ -34,12 +36,16 @@ loginForm.addEventListener("submit" ,function(event){
 
    //alert("Login Successful");
     }else{
+        loginBtn.disabled = false;
+        loginBtn.textContent = "Login";
         alert(data.message);//agar login successful nhi hua to us ko message mil jaye ga
     }
 })
 
 .catch(function(error){//if server gives error
     console.log(error);
+    loginBtn.disabled = false;
+    loginBtn.textContent = "Login";
 });
   
 });

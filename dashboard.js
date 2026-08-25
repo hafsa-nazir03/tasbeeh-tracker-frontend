@@ -178,7 +178,7 @@ filteredData.forEach(function(item){
 
 //average Target:
 let averageTarget = 0;
-if(totalTasbeehs>0){
+if(totalTasbeehs > 0){
     averageTarget = totalTarget/totalTasbeehs;
 }
         document.getElementById("total-tasbeehs").textContent = totalTasbeehs;

@@ -4,8 +4,11 @@ if(!token){
 }
 function displayItems(item){
 const tasbeehList = document.getElementById("tasbeehList");//gets the html element by id
-tasbeehList.innerHTML += `<div class="Tasbeeh-card"> <h3>📿${item.name}</h3><p>🎯Target: ${item.target}</p><p>📁Category: ${item.category}</p> <button class="update-btn" onclick="updateTasbeeh(${item.id})">Update</button>
-<button type="button" class="delete-btn" onclick="deleteTasbeeh(${item.id})">Delete</button> <button class="count-btn" onclick="openCounter(${item.id})">Count</button></div>`;
+tasbeehList.innerHTML += `<div class="Tasbeeh-card"> <h3>📿${item.name}</h3><p>🎯Target: ${item.target}</p><p>📁Category: ${item.category}</p> <button class="update-btn" onclick="updateTasbeeh('${item._id}')">Update</button>
+
+            <button type="button" class="delete-btn" onclick="deleteTasbeeh('${item._id}')">Delete</button>
+
+            <button class="count-btn" onclick="openCounter('${item._id}')">Count</button> </div>`;
 };
 
 function loadTasbeehs() {//this function will be used in update and delete to get the data
@@ -54,9 +57,9 @@ loadTasbeehs();//API request, data load(Response), data receive
 const tasbeehForm = document.getElementById("tasbeeh-form");
 tasbeehForm.addEventListener("submit",function(event){
 event.preventDefault();
-const name = document.getElementById("name").value;//takes the value entered by the user 
-const target = document.getElementById("target").value;//same, but here the .value gives string
-const category = document.getElementById("drop-down").value;
+const name = document.getElementById("name").value.trim();//takes the value entered by the user 
+const target = document.getElementById("target").value.trim();//same, but here the .value gives string
+const category = document.getElementById("drop-down").value.trim();
 
 //validation checks for POST
 if(name == ""){
@@ -82,7 +85,9 @@ const newTasbeeh = {//make an object newTasbeeh having 2 attributes
     category : category
 };
 
-
+const addBtn = document.querySelector(".button01");
+addBtn.disabled = true;
+addBtn.textContent = "Adding...";
 fetch(`${API_URL}/tasbeeh`, {
     method: "POST",
     headers: {
@@ -95,18 +100,32 @@ fetch(`${API_URL}/tasbeeh`, {
     return response.json();
 })
 .then(function(data) {
-    const tasbeehList = document.getElementById("tasbeehList");
+     const tasbeehList = document.getElementById("tasbeehList");
      tasbeehList.innerHTML = ``;//agar khali nhi kro gy to existing jo not found wala message aarha hai, wo bhi sath display hoga woth card
      loadTasbeehs();
     document.getElementById("name").value = "";//these two lines basically empty the boxes after input
     document.getElementById("target").value = "";
     document.getElementById("drop-down").value = "";
-});
+    addBtn.disabled = false;
+    addBtn.textContent = "Add Tasbeeh";
+       
+})
+.catch(function(error){
+    console.error(error);
+    alert("Something went wrong while adding Tasbeeh.");
+ addBtn.disabled = false;
+ addBtn.textContent = "Add Tasbeeh";
+})
 
 
 });
 
 function updateTasbeeh(id){
+    const confirmUpdate = confirm("Are you sure you want to update this Dua?");
+
+    if(!confirmUpdate){
+        return;
+    }
  const name = prompt("Enter Tasbeeh name");//these validation checks are needed when details are entered to update a tasbeeh.
 const target = prompt("Enter Target");
 const category = prompt("Enter Category");
@@ -146,6 +165,11 @@ const category = prompt("Enter Category");
 
 //deleting a tasbeeh logic, here body is not included, as delete opr is performed by id
 function deleteTasbeeh(id){
+    const confirmDelete = confirm("Are you sure you want to delete this Dua?");
+
+    if(!confirmDelete){
+        return;
+    }
     fetch(`${API_URL}/tasbeeh/${id}` , {
         method : "DELETE",
         headers: {
