@@ -27,7 +27,7 @@ async function loadAdminDashboard() {
         const recentUsersBody = document.getElementById("recentUsersBody");
         recentUsersBody.innerHTML = "";
         
-        data.forEach(function(user){
+        data.recentUsers.forEach(function(user){
         const row = document.createElement("tr");
 
         row.innerHTML = `<td>${user.name}</td>

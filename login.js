@@ -32,7 +32,16 @@ loginForm.addEventListener("submit" ,function(event){
         //yahan say ham global state ko use kren gy.
         store.token = data.token;
    localStorage.setItem("token",data.token);//ab ham save kr rhy hen token ko local storage main 
-   window.location.href = "index.html";//page dobara refresh ho rha hai, aur js dobara load ho rha hai, isi liye loclstorage bhi use kr rhy hen
+
+   const payload = JSON.parse(atob(data.token.split(".")[1]));
+   if(payload.role === "admin"){
+    window.location.href = "admin.html";
+
+   }else{
+    window.location.href = "index.html";
+   }
+
+  // window.location.href = "index.html";//page dobara refresh ho rha hai, aur js dobara load ho rha hai, isi liye loclstorage bhi use kr rhy hen
 
    //alert("Login Successful");
     }else{

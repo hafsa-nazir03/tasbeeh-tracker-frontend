@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 html,
 body{
     margin: 0;
@@ -7,7 +7,7 @@ body{
 }
 
 body{
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Libertinus Serif", serif;
      background-color: #b5dfbe;
 }
 
