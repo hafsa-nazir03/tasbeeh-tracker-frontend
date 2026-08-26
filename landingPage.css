@@ -14,12 +14,16 @@ body{
     text-align: center;
     position: relative;
    overflow-x: hidden;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 .footer{
-    background-color: #7d88b9;
+    background-color: #1b4332;
+    color: white;
      text-align: center;
-     margin-top: 39px;
+     margin-top: auto;
      padding: 10px 10px;
 }
 
@@ -37,16 +41,27 @@ body{
     margin-bottom: 5px;
 }
 
-a{/* anchor tag is by default block or inblock*/
-    color:#1b4332 ;
+#links{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+#links a{/* anchor tag is by default block or inblock*/
+     color: white;
+    background: #2d6a4f;
+    padding: 8px 14px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
     font-size: 1rem;
     transition: 0.3s ease;
 }
-
-a:hover{
-   color:   #143d2c;
-   opacity: 0.85;
-  text-decoration: underline;
+#links a:nth-child(2){
+    left: 110px;   /* pehle button ki width + gap ke hisaab se adjust karo */
+}
+#links a:hover{
+  transform: translateY(-2px);
+  background-color: #098f53;
 }
