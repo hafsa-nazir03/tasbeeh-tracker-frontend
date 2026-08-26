@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>🔐 Admin Dashboard</h1>
+    <p>Welcome Admin</p>
+    <button id="logoutBtn">Logout</button>
+
+    <!--Stats Section: -->
+    <section class="stats-container">
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Tasbeehs</h3>
+            <p id="totalTasbeehs">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Duas</h3>
+            <p id="totalDuas">0</p>
+        </div>
+    </section>
+
+    <!--recent users: -->
+    <section class="resent-users">
+        <h2>Recent Users</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id="recentUsersBody"></tbody>
+                <!-- Users will be added by JavaScript -->
+            </table>
+        </div>
+    </section>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
