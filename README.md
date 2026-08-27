@@ -1,111 +1,373 @@
-# 📿 Tasbeeh Tracker — Frontend
+# 🌿 Beads & Duas — Tasbeeh & Dua Tracker
 
-A simple, clean web app to help you track your daily dhikr (Tasbeeh), set targets, and stay consistent with your remembrance of Allah — one count at a time.
+> A full-stack web application designed to help users track their daily Tasbeeh, save and manage Duas, and maintain their spiritual routine through a simple, peaceful, and distraction-free interface.
 
-> *"Remember Me; I will remember you."* — (Al-Baqarah, 2:152)
-
----
-
-## ✨ Features
-
-- 🔐 User authentication (Signup / Login)
-- ➕ Add custom Tasbeeh with a name, target count and category
-- 🔢 Live tap-to-count counter for each Tasbeeh
-- 📊 Personal dashboard to view progress across all Tasbeehs
-- 🤲 Dedicated page for the Virtues of Zikr
-- 📱 Fully responsive — works smoothly on both mobile and desktop
-- ⚡ Optimized for performance and SEO
+**Capstone Project — Full-Stack Production App**
+Built as part of the Full Stack Web Development Internship at **Neurofive Solutions**.
 
 ---
 
-## 🛠️ Technologies Used
+## 🌙 Live Application
 
-- **HTML5**
-- **CSS3**
-- **Vanilla JavaScript**
-- **GitHub Pages** (Hosting)
+**Frontend:**
+ https://hafsa-nazir03.github.io/tasbeeh-tracker-frontend/
 
----
+**Backend API:**
+https://tasbeeh-tracker-backend.vercel.app
 
-## 🚀 Live Demo
+**Frontend Repository:**
+https://github.com/hafsa-nazir03/tasbeeh-tracker-frontend.git
 
-🔗 **Live App:** [https://hafsa-nazir03.github.io/tasbeeh-tracker-frontend/login.html]
-
----
-
-## 🔗 Backend Repository
-
-🔗 **Backend Repo:** [https://github.com/hafsa-nazir03/tasbeeh-tracker-backend]
-
-🔗 **Live Backend API:** [https://tasbeeh-tracker-backend.vercel.app]
+**Backend Repository:**
+https://github.com/hafsa-nazir03/tasbeeh-tracker-backend.git
 
 ---
 
-## 🏗️ Architecture
+## 📖 About the Project
 
+**Beads & Duas** is a full-stack Tasbeeh and Dua tracking application created to solve a simple problem: keeping daily Tasbeeh records and personal Duas organized in one convenient place.
+
+Instead of using separate tools for counting Tasbeeh and saving Duas, users can manage both through one application.
+
+The project includes:
+
+* User authentication and authorization
+* Personal Tasbeeh management
+* Dua management
+* Protected user pages
+* Admin dashboard
+* Dashboard statistics and charts
+* Secure password handling
+* MongoDB data persistence
+* Client-side and server-side validation
+* Responsive UI
+* Loading, error, and empty states
+* Automated frontend, backend, and end-to-end testing
+
+---
+
+# ✨ Key Features
+
+## 🔐 Authentication & Authorization
+
+* User registration
+* Secure login
+* Password hashing using bcrypt
+* JWT-based authentication
+* Protected routes
+* Token-based session handling
+* Logout functionality
+* Role-based access control
+* Separate admin access
+* Unauthorized users cannot access protected resources
+
+---
+
+## 📿 Tasbeeh Tracker
+
+Users can create and manage their Tasbeeh records.
+
+### Features
+
+* Create a Tasbeeh
+* View Tasbeeh records
+* Update Tasbeeh
+* Delete Tasbeeh
+* Set a target count
+* Select Tasbeeh category
+* Track progress
+* Personal user-specific data
+
+---
+
+## 🤲 Dua Tracker
+
+Users can save and manage their personal Duas.
+
+### Features
+
+* Add a Dua
+* View saved Duas
+* Update a Dua
+* Delete a Dua
+* Add Dua title
+* Save Dua text
+* Categorize Duas
+* Empty state when no Duas exist
+* Loading state while fetching data
+* Error handling for failed requests
+
+---
+
+## 📊 Dashboard & Data Visualization
+
+The dashboard provides a visual overview of user data.
+
+### Visualizations include:
+
+* Tasbeeh statistics
+* Category-based data
+* Doughnut chart
+* Bar chart
+* Summary/stat cards
+
+Charts are dynamically generated from backend data rather than using static values.
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+The application includes a separate admin view for administrative functionality.
+
+Admin access is protected through role-based authorization.
+
+The admin dashboard can provide an overview of registered users and application data without exposing normal user functionality to unauthorized users.
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Chart.js
+* Responsive CSS
+* GitHub Pages
+
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT
+* bcrypt
+* CORS
+* dotenv
+
+## Testing
+
+* Vitest
+* Supertest
+* Cypress
+* End-to-End Testing
+
+## Deployment
+
+* GitHub Pages — Frontend
+* Vercel — Backend
+* MongoDB Atlas — Database
+
+---
+
+# 📄 Application Pages
+
+The application contains multiple distinct views:
+
+| Page                  | Purpose                                         |
+| --------------------- | ----------------------------------------------- |
+| 🏠 Index              | Introduces Beads & Duas and its features        |
+| 🔑 Login              | Authenticates existing users                    |
+| 📝 Signup             | Creates a new user account                      |
+| 📿 Tasbeeh Tracker     | Creates and manages Tasbeeh records             |
+| 🤲 Duas Tracker       | Saves and manages personal Duas                 |
+| 📊 Dashboard          | Displays user statistics and charts             |
+| 👨‍💼 Admin Dashboard    | Provides protected administrative functionality |
+
+---
+
+# 🔄 CRUD Operations
+
+The application implements full CRUD functionality for two main resources.
+
+## Tasbeeh Resource
+
+```text
+CREATE → Add a new Tasbeeh
+READ   → View Tasbeeh records
+UPDATE → Edit a Tasbeeh
+DELETE → Remove a Tasbeeh
 ```
-Frontend (HTML/CSS/JS)  --->  Backend API (Node.js + Express, hosted on Vercel)  --->  MongoDB Atlas
-   Hosted on GitHub Pages          JWT-based Authentication                          Cloud Database
+
+## Dua Resource
+
+```text
+CREATE → Add a new Dua
+READ   → View saved Duas
+UPDATE → Edit a Dua
+DELETE → Remove a Dua
 ```
 
-- The frontend is a static site (plain HTML/CSS/JS) hosted on **GitHub Pages**.
-- It communicates with the backend over REST API calls (`config.js` holds the base API URL).
-- The backend is deployed separately on **Vercel** and handles authentication, and persistence via **MongoDB Atlas**.
-- Auth state is managed client-side using JWT tokens returned by the backend.
+All records are persisted in MongoDB.
 
 ---
 
-## 📈 SEO & Lighthouse Results
+# ✅ Validation & Application States
 
-SEO essentials implemented across pages:
-- ✅ Descriptive page titles
-- ✅ Meta descriptions
-- ✅ Alt text on all images
-
-**Lighthouse Audit (Deployed Site):**
-
-| Category        | Score |
-|------------------|-------|
-| Performance      | 98    |
-| Accessibility    | 100 ✅ (fixed) |
-| Best Practices   | 100   |
-| SEO              | 100   |
-
-**Accessibility issues found & fixed:**
-- ❌ ➜ ✅ Low color contrast on text/buttons — fixed by adjusting colors to meet contrast ratio standards.
-- ❌ ➜ ✅ Missing main landmark on the login page — fixed by wrapping page content in a proper `<main>` landmark.
-- ❌ ➜ ✅ Improperly placed "Back to Tracker" anchor tag on virtues.html — fixed by repositioning it and making it responsive to improve accessibility and navigation flow.
+The application implements validation on both the frontend and backend.The backend validates incoming data before saving it to MongoDB.This prevents invalid or incomplete data from bypassing frontend validation.
 
 ---
 
-## ⚙️ Setup Instructions
+# 🧪 Testing Strategy
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/hafsa-nazir03/tasbeeh-tracker-frontend.git
-   cd tasbeeh-tracker-frontend
-   ```
+Testing was implemented across the application to verify both individual functionality and complete user flows.
 
-2. **Configure the API URL**
+## Frontend Tests
 
-   Open `config.js` and make sure it points to your backend (local or deployed):
-   ```js
-   const API_URL = "https://tasbeeh-tracker-backend.vercel.app";
-   ```
+Frontend tests cover important interactions and validation scenarios such as:
 
-3. **Run locally**
+* Form rendering
+* Empty field validation
+* Invalid target validation
+* Category validation
+* Valid form submission
+* API request triggering
 
-   Since this is a static site, you can simply open `login.html` in your browser, or serve it with a local server:
-   ```bash
-   npx serve .
-   ```
+## Backend Tests
 
-4. **Deploy**
+Backend tests cover API behavior including:
 
-   This project is deployed using **GitHub Pages** — pushing to the `main` branch automatically reflects on the live site (or via GitHub repo settings → Pages).
+* Root API response
+* GET Tasbeeh endpoint
+* Successful POST request
+* Missing required fields
+* Invalid target values
+* API failure cases
+
+## End-to-End Testing
+
+Cypress is used to test the complete user flow.
+
+Example flow:
+
+```text
+Login
+  ↓
+Access protected page
+  ↓
+Create Tasbeeh
+  ↓
+Submit form
+  ↓
+Verify saved record
+```
+---
+
+# 🚀 Local Setup
+
+## 1. Clone the Frontend
+
+```bash
+git clone https://github.com/hafsa-nazir03/tasbeeh-tracker-frontend.git
+cd tasbeeh-tracker-frontend
+```
+
+Open the frontend using a local development server such as VS Code Live Server.
 
 ---
 
-## 👩‍💻 Author
+## 2. Clone the Backend
+
+```bash
+git clone https://github.com/hafsa-nazir03/tasbeeh-tracker-backend.git
+cd tasbeeh-tracker-backend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 3. Start the Backend
+
+```bash
+node server.js
+```
+
+For development:
+
+```bash
+npm run dev
+```
+
+The backend will run locally on the configured port.
+
+---
+
+# 📝 Case Study
+
+## The Problem
+
+Managing daily Tasbeeh and personal Duas can become inconvenient when these activities are kept in different places.
+
+The goal of Beads & Duas was to create one simple application where users can track their Tasbeeh and save their Duas while keeping their personal records protected.
+
+---
+
+## Why These Technologies?
+
+### HTML, CSS & JavaScript
+
+Vanilla frontend technologies were used to build a lightweight and responsive interface without introducing unnecessary framework complexity.
+
+### Node.js & Express.js
+
+Express provides a simple structure for building REST APIs and handling authentication, validation, and CRUD operations.
+
+### MongoDB & Mongoose
+
+MongoDB was selected because the application's user, Tasbeeh, and Dua data can be stored naturally as documents. Mongoose provides schema validation and easier database interaction.
+
+### JWT
+
+JWT provides token-based authentication for protected API routes.
+
+### bcrypt
+
+bcrypt is used to securely hash user passwords before storing them.
+
+### Chart.js
+
+Chart.js was selected to create interactive visualizations for the dashboard.
+
+### Vitest, Supertest & Cypress
+
+Different testing tools were used to verify frontend behavior, backend API endpoints, and complete end-to-end user flows.
+
+---
+
+# 🧩 Major Challenge & Solution
+
+## Challenge: Production Backend & Database Connection
+
+One of the major challenges during development was making the backend work correctly after deployment.
+
+The application worked locally but production requests could fail when the backend could not establish or maintain the MongoDB connection correctly.
+
+### Solution
+
+The backend database connection was improved by:
+
+* Creating a dedicated database connection function
+* Managing the connection state
+* Configuring MongoDB connection options
+* Using environment variables for production credentials
+* Ensuring the database connection is available before processing requests
+* Configuring MongoDB Atlas network access for the deployed backend
+
+This made the application more reliable in the production environment.
+
+---
+
+
+# 👩‍💻 Author
 
 **Hafsa Nazir**
+
+---
+
