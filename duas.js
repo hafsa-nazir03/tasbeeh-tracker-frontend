@@ -32,7 +32,7 @@ function loadDuas() {//this function will be used in update and delete to get th
 
             if(data.length == 0){//backend data aaya hai, aur ham dekh rhy ky agar wo empty hai to yai message send kro
                 duaList.innerHTML = `
-                    <p>📿 No Duas Found. Add your first Dua and keep it close to your heart.</p>
+                    <p class="no-duas">📿 No Duas Found. Add your first Dua and keep it close to your heart.</p>
                 `;
                 return;//taky foreach na chal paye.
             }

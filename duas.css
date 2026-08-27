@@ -7,11 +7,13 @@ body{
 }
 
 body{
-    font-family: "Libertinus Serif", serif;
+    font-family: "Noto Sans", sans-serif;
      background-color: #b5dfbe;
 }
 
 a{
+    margin-top: 20px;
+    margin-left: 10px;
     color: white;
     background: #2d6a4f;
     padding: 8px 14px;
@@ -42,15 +44,18 @@ h1{
 .tagline{
     color: #2d6a4f;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 40px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 
 .Qoute{
+    color: #2d6a4f;
+    text-align: center;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
     text-align: center;
    margin-bottom: 5px;
-   color: #2d6a4f;
 }
 
 .form-group{
@@ -244,6 +249,16 @@ margin-top: 30px;
     right: -60px;
 }
 
+.no-duas{
+    width: 100%;
+    text-align: center;
+    color: #1b4332;
+    font-size: 1.1rem;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
 @media (max-width: 600px){
 
     a{
@@ -292,4 +307,10 @@ margin-top: 30px;
         box-sizing: border-box;
     }
 
+    .no-duas {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        margin: 15px auto;
+    }
 }

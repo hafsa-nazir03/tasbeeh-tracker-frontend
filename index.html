@@ -3,52 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasbeeh Tracker | Daily Dhikr Tracker</title>
-    <meta name="description" content="Tasbeeh Tracker is a simple web application to track daily dhikr, set Tasbeeh targets, and manage your personal Tasbeehs.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/tasbeehTracker.jpg" alt="Tasbeeh Tracker logo"> 
+    <title>Beads & Duas | Tasbeeh & Dua Tracker</title>
+    <link rel="stylesheet" href="landingPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="images/png" href="images/tasbeehTracker.jpg"  alt="Beads and Duas Logo">
 </head>
 <body>
-        <nav class="top-links">
-        <a href="virtues.html">🤲 Virtues of Zikar</a>
-        <a href="dashboard.html">📊 Dashboard</a>
-        <a href="duas.html">📝 Dua Tracker</a>
-        <button id="logout-btn">⬅️ Logout</button>
-        </nav>
-        <h1 class="text-h1">Tasbeeh Tracker</h1>
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <p class="Ayah">‘Remember Me; I will remember you.’</p>
-        <p class="Ayah-Reference"><strong>(al-Baqarah, 2:152)</strong></p>
-        <p class="tagline"> Track your daily dhikr 🌙</p>
-    
-    <form id="tasbeeh-form">
-        <div class="form-group">
-        <label for="name">Tasbeeh Name</label>
-        <input type="text" id="name" placeholder="e.g. Astaghfirullah">
-        </div>
-        <div class="form-group">
-        <label for="target" class="label02">Target</label>
-        <input type="number" id="target" placeholder="e.g. 100">
-        </div>
+    <nav class="nav_right">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+    <h1>Beads & Duas</h1>
+    <p class="reference">Your peaceful companion for daily Tasbeeh & Duas.</p>
+    <h3>"And remember your Lord much, and glorify Him in the evening and morning."</h3>
+   <p class="reference">Quran 3:41</p>
+   <img src="/images/mainlogo.jpg" >
+   
+  <nav id="links">
+        <a href="signup.html">Start Your Journey</a>
+        <a href="login.html">I Already Have an Account</a>
+    </nav>
+   </div>
+   </section>
 
-        <div id="drop-down-main">
-            <label for="category">Select Category</label>
-        <select id="drop-down">
-            <option value="" disabled selected>Select Category</option><!--Is main yeh hoga ky disabled selected say wo select nhi ho sky ga-->
-            <option value="Morning">Morning</option>
-            <option value="Evening">Evening</option>
-            <option value="Daily">Daily</option>
-        </select>
-        </div>
-        
-        <button type="submit" class="button01">Add Tasbeeh</button>
+   <section class="works">
+    <h1>How it Works</h1>
+    <div class="steps">
+    <div class="step01">
+        <h2>Create Account</h2>
+        <img src="images/step01.png" alt="step01">
+        <p>Signup in a few simple steps and get started.</p>
+    </div>
 
-    </form>
-    <h2 class="Tasbeehs">Your Tasbeehs</h2>
-    <p id="Loading">Loading Tasbeehs...</p>
-    <div id="tasbeehList"></div>
-    <script src="config.js"></script>
-    <script src="script.js"></script>
+    <div class="step02">
+        <h2>Track Tasbeeh</h2>
+        <img src="images/step02.png" alt="step01">
+        <p>Add your Tasbeeh goals and track them daily.</p>
+    </div>
+    <div class="step03">
+        <h2>Grow Your Routine</h2>
+        <img src="images/backup.png" alt="step01">
+        <p>Stay consistent and build a better you everyday.</p>
+    </div>
+    </div>
+   </section>
+   <!--Footer-->
+      <footer class="footer">
+      <div class="footer-components">
+        <h3>Beads & Duas</h3>
+        <p>Your companion for tracking Tasbeeh and treasuring Duas..</p>
+        <p>© 2026 Beads & Duas. All Rights Reserved.</p>
+        <p>Follow Us</p>
+        <div id="linkedin">
+        <a href="https://www.linkedin.com/in/hafsa-nazir123" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+       </div>
+      </footer>
 </body>
 </html>

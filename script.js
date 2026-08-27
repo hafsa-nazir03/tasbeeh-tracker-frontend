@@ -34,7 +34,7 @@ function loadTasbeehs() {//this function will be used in update and delete to ge
 
             if(data.length == 0){//backend data aaya hai, aur ham dekh rhy ky agar wo empty hai to yai message send kro
                 tasbeehList.innerHTML = `
-                    <p>📿 No Tasbeehs Found. Every remembrance brings you closer to Allah. Add your first Tasbeeh.</p>
+                    <p class="no-tasbeeh">📿 No Tasbeehs Found. Every remembrance brings you closer to Allah. Add your first Tasbeeh.</p>
                 `;
                 return;//taky foreach na chal paye.
             }
